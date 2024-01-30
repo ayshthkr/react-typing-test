@@ -1,0 +1,89 @@
+.text {
+	--line-height: 1.3em;
+	line-height: var(--line-height);
+	max-height: calc(var(--line-height) * 6);
+	overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+	max-width: 50vw;
+	position: relative;
+}
+
+.container::selection {
+	user-select: none;
+}
+
+.input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background: transparent;
+	border: none;
+	font-size: 2rem;
+	font-weight: 800;
+	font-family: 'Salsa', cursive;
+	font-style: normal;
+	letter-spacing: 2px;
+	resize: none;
+	color: transparent;
+	caret-color: white;
+	opacity: 0;
+}
+
+.input:focus {
+	outline: none;
+}
+
+/* .answer-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    text-wrap: wrap;
+} */
+
+span.wrong {
+	text-decoration: line-through;
+	color: red;
+}
+
+span.space {
+	white-space: pre;
+}
+
+span.correct {
+	color: whitesmoke;
+}
+
+span.active {
+    border-left: 1px solid red;
+}
+
+/* .text:last-child {
+    border-right: 2px solid yellow;
+} */
+
+.dialog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+
+	border: 1px solid red;
+}
